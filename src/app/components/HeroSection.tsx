@@ -82,7 +82,7 @@ export default function HeroSection() {
                         </h1>
                         <button
                             onClick={() => scrollToSection("nosotros")}
-                            className="bg-dispep-primary text-white font-montserrat font-bold px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-200 hover:scale-105"
+                            className="bg-dispep-primary text-white font-montserrat font-bold px-8 py-3 rounded-lg hover:bg-dispep-primary/90 transition-all duration-200 hover:scale-105"
                         >
                             Conócenos.
                         </button>
