@@ -114,12 +114,12 @@ export default function FooterSection() {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Ingresa tu correo electrónico"
-                                    className="w-full h-12 px-4 pr-12 bg-dispep-primary bg-opacity-20 rounded-lg border-none outline-none text-dispep-primary placeholder-dispep-primary placeholder-opacity-50 font-open-sans"
+                                    className="w-full h-12 px-4 pr-12 bg-dispep-primary/20 rounded-lg border-none outline-none text-dispep-primary placeholder-dispep-primary/50 font-open-sans"
                                     required
                                 />
                                 <button
                                     type="submit"
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dispep-primary hover:text-opacity-70 transition-colors"
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dispep-primary hover:text-dispep-primary/70 transition-colors"
                                 >
                                     <svg
                                         className="w-6 h-6"
@@ -134,7 +134,7 @@ export default function FooterSection() {
                                     </svg>
                                 </button>
                             </div>
-                            <p className="text-dispep-primary font-open-sans text-sm opacity-60">
+                            <p className="text-dispep-primary/60 font-open-sans text-sm">
                                 No te pierdas nuestras novedades y ofertas exclusivas.
                             </p>
                         </form>

@@ -134,8 +134,8 @@ export default function ProductSection() {
                         onClick={goToPrevProducts}
                         disabled={currentProductPage === 0}
                         className={`p-2 transition-colors ${currentProductPage === 0
-                            ? "text-dispep-gray cursor-not-allowed opacity-50"
-                            : "text-dispep-primary hover:text-opacity-70 cursor-pointer"
+                            ? "text-dispep-gray/50 cursor-not-allowed"
+                            : "text-dispep-primary hover:text-dispep-primary/70 cursor-pointer"
                             }`}
                     >
                         <svg
@@ -175,7 +175,7 @@ export default function ProductSection() {
                                         <p className="text-dispep-primary font-open-sans text-sm mb-4">
                                             {product.description}
                                         </p>
-                                        <button className="bg-dispep-primary text-white font-montserrat font-semibold px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors">
+                                        <button className="bg-dispep-primary text-white font-montserrat font-semibold px-6 py-2 rounded-lg hover:bg-dispep-primary/90 transition-colors">
                                             Ver más
                                         </button>
                                     </div>
@@ -189,8 +189,8 @@ export default function ProductSection() {
                         onClick={goToNextProducts}
                         disabled={currentProductPage === productSets.length - 1}
                         className={`p-2 transition-colors ${currentProductPage === productSets.length - 1
-                            ? "text-dispep-gray cursor-not-allowed opacity-50"
-                            : "text-dispep-primary hover:text-opacity-70 cursor-pointer"
+                            ? "text-dispep-gray/50 cursor-not-allowed"
+                            : "text-dispep-primary hover:text-dispep-primary/70 cursor-pointer"
                             }`}
                     >
                         <svg
@@ -216,8 +216,8 @@ export default function ProductSection() {
                         onClick={goToPrevMobileProduct}
                         disabled={currentMobileProduct === 0}
                         className={`p-1 transition-colors flex-shrink-0 ${currentMobileProduct === 0
-                            ? "text-dispep-gray cursor-not-allowed opacity-50"
-                            : "text-dispep-primary hover:text-opacity-70 cursor-pointer"
+                            ? "text-dispep-gray/50 cursor-not-allowed"
+                            : "text-dispep-primary hover:text-dispep-primary/70 cursor-pointer"
                             }`}
                     >
                         <svg
@@ -251,7 +251,7 @@ export default function ProductSection() {
                                 <p className="text-dispep-primary font-open-sans text-xs mb-3 leading-relaxed">
                                     {allProducts[currentMobileProduct]?.description}
                                 </p>
-                                <button className="bg-dispep-primary text-white font-montserrat font-semibold px-3 py-1.5 rounded-lg hover:bg-opacity-90 transition-colors text-xs">
+                                <button className="bg-dispep-primary text-white font-montserrat font-semibold px-3 py-1.5 rounded-lg hover:bg-dispep-primary/90 transition-colors text-xs">
                                     Ver más
                                 </button>
                             </div>
@@ -263,8 +263,8 @@ export default function ProductSection() {
                         onClick={goToNextMobileProduct}
                         disabled={currentMobileProduct === allProducts.length - 1}
                         className={`p-1 transition-colors flex-shrink-0 ${currentMobileProduct === allProducts.length - 1
-                            ? "text-dispep-gray cursor-not-allowed opacity-50"
-                            : "text-dispep-primary hover:text-opacity-70 cursor-pointer"
+                            ? "text-dispep-gray/50 cursor-not-allowed"
+                            : "text-dispep-primary hover:text-dispep-primary/70 cursor-pointer"
                             }`}
                     >
                         <svg
