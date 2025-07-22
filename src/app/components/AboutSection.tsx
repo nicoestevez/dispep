@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutSection() {
     return (
         <section id="nosotros" className="bg-white py-8 md:py-16 px-4">
@@ -16,11 +18,13 @@ export default function AboutSection() {
                     </div>
 
                     {/* Image */}
-                    <div className="flex-1 w-full">
-                        <img
+                    <div className="flex-1 min-w-0 w-full relative h-48 md:h-80 min-h-[192px] md:min-h-[320px] flex-shrink-0">
+                        <Image
                             src="/images/Galpón.png"
                             alt="DISPEP Warehouse"
-                            className="w-full h-48 md:h-80 object-cover rounded-lg shadow-lg"
+                            fill
+                            className="object-cover rounded-lg shadow-lg"
+                            priority
                         />
                     </div>
                 </div>
