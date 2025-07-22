@@ -75,7 +75,7 @@ const productSets = [
 ];
 
 export default function ProductSection() {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const isMobileMenuOpen = false;
     const [currentProductPage, setCurrentProductPage] = useState(0);
     const [currentMobileProduct, setCurrentMobileProduct] = useState(0);
 
@@ -157,7 +157,7 @@ export default function ProductSection() {
                     <div className="flex-1 max-w-5xl">
                         {/* Dynamic Product Grid */}
                         <div className="grid grid-cols-2 gap-6">
-                            {currentProducts.map((product, index) => (
+                            {currentProducts.map(product => (
                                 <div
                                     key={product.id}
                                     className="bg-white rounded-lg shadow-lg overflow-hidden"

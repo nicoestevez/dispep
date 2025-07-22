@@ -63,9 +63,13 @@ export default function FooterSection() {
                                         d="M22 4C22 2.9 21.1 2 20 2H4C2.9 2 2 2.9 2 4M22 4V16C22 17.1 21.1 18 20 18H4C2.9 18 2 17.1 2 16V4M22 4L12 11L2 4"
                                     />
                                 </svg>
-                                <span className="text-dispep-primary font-open-sans">
-                                    comercial@hidromontes.cl
-                                </span>
+                <a
+                    href="mailto:contacto@dispep.cl"
+                    className="text-dispep-primary font-open-sans hover:underline focus:outline-none"
+                    aria-label="Enviar correo a contacto@dispep.cl"
+                >
+                    contacto@dispep.cl
+                </a>
                             </div>
 
                             {/* Address */}
@@ -85,9 +89,15 @@ export default function FooterSection() {
                                     <circle cx="12" cy="10" r="3" />
                                 </svg>
                                 <span className="text-dispep-primary font-open-sans">
-                                    Camino Tapihue KM 0,7,
-                                    <br />
-                                    Casablanca
+                                    <a
+                                        href="https://maps.app.goo.gl/Mc6fGfL4ndbwk1sC9"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-dispep-primary font-open-sans hover:underline focus:outline-none"
+                                        aria-label="Abrir dirección en Google Maps"
+                                    >
+                                        Camino Tapihue KM 0,7,<br />Casablanca
+                                    </a>
                                 </span>
                             </div>
                         </div>
@@ -95,11 +105,16 @@ export default function FooterSection() {
 
                     {/* Warehouse Image */}
                     <div className="lg:w-80">
-                        <img
-                            src="/images/Mapa.png"
-                            alt="DISPEP Building"
-                            className="w-full h-48 object-cover rounded-lg shadow-lg"
-                        />
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.3816311551373!2d-71.38550172355998!3d-33.32864739128592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96626fe10a1104a7%3A0xc1a44a356954072e!2sDispep!5e1!3m2!1ses!2scl!4v1753222918160!5m2!1ses!2scl"
+                            width="100%"
+                            height="220"
+                            style={{ border: 0, borderRadius: '0.5rem', boxShadow: '0 4px 12px rgba(0,0,0,0.15)' }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Ubicación DISPEP en Google Maps"
+                        ></iframe>
                     </div>
 
                     {/* Newsletter Section */}
