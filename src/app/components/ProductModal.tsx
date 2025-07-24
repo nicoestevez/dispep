@@ -89,10 +89,10 @@ export default function ProductModal({ isOpen, onClose, categories, image, title
               {/* Category header */}
               <div className="mb-6">
                 <h2 className="text-dispep-primary font-open-sans text-2xl font-bold mb-2">
-                  {category.title}
+                  {categoryIndex === 0 && title ? title : category.title}
                 </h2>
                 <p className="text-gray-600 font-open-sans text-lg">
-                  {category.description}
+                  {categoryIndex === 0 && description ? description : category.description}
                 </p>
               </div>
 
