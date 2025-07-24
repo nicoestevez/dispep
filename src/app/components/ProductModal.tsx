@@ -106,22 +106,22 @@ export default function ProductModal({ isOpen, onClose, categories, image, title
                         Código
                       </span>
                     </div>
-                    <div className="py-2 md:py-3 px-1 md:px-2">
+                    <div className="py-2 md:py-3 px-0.5 md:px-2">
                       <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Ref
                       </span>
                     </div>
-                    <div className="py-2 md:py-3 px-1 md:px-2">
+                    <div className="py-2 md:py-3 px-0.5 md:px-2">
                       <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Medida
                       </span>
                     </div>
-                    <div className="py-2 md:py-3 px-1 md:px-2">
+                    <div className="py-2 md:py-3 px-0.5 md:px-2">
                       <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Color
                       </span>
                     </div>
-                    <div className="py-2 md:py-3 px-1 md:px-2">
+                    <div className="py-2 md:py-3 px-0.5 md:px-2">
                       <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Precio
                       </span>
