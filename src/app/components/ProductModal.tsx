@@ -98,31 +98,31 @@ export default function ProductModal({ isOpen, onClose, categories, image, title
 
               {/* Product table */}
               <div className="overflow-x-auto">
-                <div className="min-w-full bg-white">
+                <div className="min-w-[600px] md:min-w-full bg-white">
                   {/* Table header */}
-                  <div className="grid grid-cols-5 gap-4 md:gap-6 border-b border-dispep-primary">
-                    <div className="py-3 px-2">
-                      <span className="text-gray-500 font-open-sans text-base md:text-lg font-medium">
+                  <div className="grid grid-cols-5 gap-2 md:gap-6 border-b border-dispep-primary">
+                    <div className="py-2 md:py-3 px-1 md:px-2">
+                      <span className="text-gray-500 font-open-sans text-xs md:text-lg font-medium">
                         Código
                       </span>
                     </div>
-                    <div className="py-3 px-2">
-                      <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                    <div className="py-2 md:py-3 px-1 md:px-2">
+                      <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Ref
                       </span>
                     </div>
-                    <div className="py-3 px-2">
-                      <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                    <div className="py-2 md:py-3 px-1 md:px-2">
+                      <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Medida
                       </span>
                     </div>
-                    <div className="py-3 px-2">
-                      <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                    <div className="py-2 md:py-3 px-1 md:px-2">
+                      <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Color
                       </span>
                     </div>
-                    <div className="py-3 px-2">
-                      <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                    <div className="py-2 md:py-3 px-1 md:px-2">
+                      <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                         Precio
                       </span>
                     </div>
@@ -130,32 +130,32 @@ export default function ProductModal({ isOpen, onClose, categories, image, title
 
                   {/* Table rows */}
                   {category.products.map((product, productIndex) => (
-                    <div 
-                      key={productIndex} 
-                      className="grid grid-cols-5 gap-4 md:gap-6 border-b border-dispep-primary hover:bg-gray-50 transition-colors"
+                    <div
+                      key={productIndex}
+                      className="grid grid-cols-5 gap-2 md:gap-6 border-b border-dispep-primary hover:bg-gray-50 transition-colors"
                     >
-                      <div className="py-3 px-2">
-                        <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                      <div className="py-2 md:py-3 px-1 md:px-2">
+                        <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.codigo}
                         </span>
                       </div>
-                      <div className="py-3 px-2">
-                        <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                      <div className="py-2 md:py-3 px-1 md:px-2">
+                        <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.ref}
                         </span>
                       </div>
-                      <div className="py-3 px-2">
-                        <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                      <div className="py-2 md:py-3 px-1 md:px-2">
+                        <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.medida}
                         </span>
                       </div>
-                      <div className="py-3 px-2">
-                        <span className="text-gray-600 font-open-sans text-base md:text-lg">
+                      <div className="py-2 md:py-3 px-1 md:px-2">
+                        <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.color}
                         </span>
                       </div>
-                      <div className="py-3 px-2">
-                        <span className="text-gray-600 font-open-sans text-base md:text-lg font-semibold">
+                      <div className="py-2 md:py-3 px-1 md:px-2">
+                        <span className="text-gray-600 font-open-sans text-xs md:text-lg font-semibold">
                           {product.precio}
                         </span>
                       </div>
