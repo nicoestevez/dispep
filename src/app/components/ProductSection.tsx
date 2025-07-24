@@ -231,7 +231,10 @@ export default function ProductSection() {
                                         <p className="text-dispep-primary font-open-sans text-sm mb-4">
                                             {product.description}
                                         </p>
-                                        <button className="bg-dispep-primary text-white font-montserrat font-semibold px-6 py-2 rounded-lg hover:bg-dispep-primary/90 transition-colors">
+                                        <button
+                                            onClick={() => handleOpenModal(product.name)}
+                                            className="bg-dispep-primary text-white font-montserrat font-semibold px-6 py-2 rounded-lg hover:bg-dispep-primary/90 transition-colors"
+                                        >
                                             Ver más
                                         </button>
                                     </div>
