@@ -49,8 +49,14 @@ export default function ProductModal({ isOpen, onClose, categories }: ProductMod
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-      <div className="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] flex flex-col">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+      onClick={onClose}
+    >
+      <div
+        className="relative bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header with hero image and close button */}
         <div 
           className="relative h-64 md:h-72 bg-cover bg-center rounded-t-lg flex justify-end items-start p-3"
