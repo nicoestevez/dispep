@@ -345,6 +345,13 @@ export default function ProductSection() {
                     </button>
                 </div>
             </div>
+
+            {/* Product Modal */}
+            <ProductModal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+                categories={getProductModalData(selectedProduct)}
+            />
         </section>
     );
 }
