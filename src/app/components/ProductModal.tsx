@@ -59,10 +59,10 @@ export default function ProductModal({ isOpen, onClose, categories, image }: Pro
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header with hero image and close button */}
-        <div 
+        <div
           className="relative h-64 md:h-72 bg-cover bg-center rounded-t-lg flex justify-end items-start p-3"
           style={{
-            backgroundImage: `url('https://api.builder.io/api/v1/image/assets/TEMP/eb6e79fac6fe31d28f4d883599c51a78ee18dc1d?width=1872')`
+            backgroundImage: `url('${image || 'https://api.builder.io/api/v1/image/assets/TEMP/eb6e79fac6fe31d28f4d883599c51a78ee18dc1d?width=1872'}')`
           }}
         >
           <button
