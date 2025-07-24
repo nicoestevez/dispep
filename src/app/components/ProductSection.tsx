@@ -85,6 +85,59 @@ export default function ProductSection() {
     const currentProducts = productSets[currentProductPage];
     const allProducts = productSets.flat(); // Flatten both sets for mobile navigation
 
+    // Sample product data for modal - in a real app this would come from an API
+    const getProductModalData = (productName: string) => {
+        const productDataMap: Record<string, any> = {
+            "Planchas OSB": [
+                {
+                    title: "Planchas OSB",
+                    description: "Planchas de gran calidad de tamaños distintos y de variados grosores.",
+                    products: [
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                    ]
+                },
+                {
+                    title: "Metalcom",
+                    description: "Metalcom perfecto para construcción.",
+                    products: [
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                    ]
+                }
+            ],
+            // Default data for other products
+            "default": [
+                {
+                    title: "Información del Producto",
+                    description: "Detalles y especificaciones técnicas del producto seleccionado.",
+                    products: [
+                        { codigo: "12345000", ref: "123456", medida: "Variadas", color: "Varios", precio: "Consultar" },
+                        { codigo: "12345001", ref: "123457", medida: "Variadas", color: "Varios", precio: "Consultar" },
+                        { codigo: "12345002", ref: "123458", medida: "Variadas", color: "Varios", precio: "Consultar" },
+                    ]
+                }
+            ]
+        };
+
+        return productDataMap[productName] || productDataMap["default"];
+    };
+
+    const handleOpenModal = (productName: string) => {
+        setSelectedProduct(productName);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setSelectedProduct('');
+    };
+
     const goToNextProducts = () => {
         if (currentProductPage < productSets.length - 1) {
             setCurrentProductPage(currentProductPage + 1);
