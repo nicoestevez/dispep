@@ -366,6 +366,8 @@ export default function ProductSection() {
                 onClose={handleCloseModal}
                 categories={getProductModalData(selectedProduct)}
                 image={selectedProductImage}
+                title={selectedProductTitle}
+                description={selectedProductDescription}
             />
         </section>
     );
