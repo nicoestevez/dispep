@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import ProductModal from './ProductModal';
 
 const productSets = [
     // First set of products
