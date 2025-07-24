@@ -100,8 +100,8 @@ export default function ProductModal({ isOpen, onClose, categories, image, title
               <div className="overflow-x-auto">
                 <div className="min-w-[600px] md:min-w-full bg-white">
                   {/* Table header */}
-                  <div className="grid grid-cols-5 gap-0.5 md:gap-6 border-b border-dispep-primary">
-                    <div className="py-2 md:py-3 px-0.5 md:px-2">
+                  <div className="grid grid-cols-5 gap-0 md:gap-6 border-b border-dispep-primary">
+                    <div className="py-2 md:py-3 px-0 md:px-2">
                       <span className="text-gray-500 font-open-sans text-xs md:text-lg font-medium">
                         Código
                       </span>
