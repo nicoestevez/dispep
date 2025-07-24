@@ -131,9 +131,11 @@ export default function ProductSection() {
         return productDataMap[productName] || productDataMap["default"];
     };
 
-    const handleOpenModal = (productName: string, productImage: string) => {
+    const handleOpenModal = (productName: string, productImage: string, productTitle: string, productDescription: string) => {
         setSelectedProduct(productName);
         setSelectedProductImage(productImage);
+        setSelectedProductTitle(productTitle);
+        setSelectedProductDescription(productDescription);
         setIsModalOpen(true);
     };
 
@@ -141,6 +143,8 @@ export default function ProductSection() {
         setIsModalOpen(false);
         setSelectedProduct('');
         setSelectedProductImage('');
+        setSelectedProductTitle('');
+        setSelectedProductDescription('');
     };
 
     const goToNextProducts = () => {
