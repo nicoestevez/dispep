@@ -310,7 +310,10 @@ export default function ProductSection() {
                                 <p className="text-dispep-primary font-open-sans text-xs mb-3 leading-relaxed">
                                     {allProducts[currentMobileProduct]?.description}
                                 </p>
-                                <button className="bg-dispep-primary text-white font-montserrat font-semibold px-3 py-1.5 rounded-lg hover:bg-dispep-primary/90 transition-colors text-xs">
+                                <button
+                                    onClick={() => handleOpenModal(allProducts[currentMobileProduct]?.name || '')}
+                                    className="bg-dispep-primary text-white font-montserrat font-semibold px-3 py-1.5 rounded-lg hover:bg-dispep-primary/90 transition-colors text-xs"
+                                >
                                     Ver más
                                 </button>
                             </div>
