@@ -25,7 +25,7 @@ interface ProductModalProps {
   description?: string;
 }
 
-export default function ProductModal({ isOpen, onClose, categories, image }: ProductModalProps) {
+export default function ProductModal({ isOpen, onClose, categories, image, title, description }: ProductModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
