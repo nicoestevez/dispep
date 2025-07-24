@@ -132,29 +132,29 @@ export default function ProductModal({ isOpen, onClose, categories, image, title
                   {category.products.map((product, productIndex) => (
                     <div
                       key={productIndex}
-                      className="grid grid-cols-5 gap-2 md:gap-6 border-b border-dispep-primary hover:bg-gray-50 transition-colors"
+                      className="grid grid-cols-5 gap-0.5 md:gap-6 border-b border-dispep-primary hover:bg-gray-50 transition-colors"
                     >
-                      <div className="py-2 md:py-3 px-1 md:px-2">
+                      <div className="py-2 md:py-3 px-0.5 md:px-2">
                         <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.codigo}
                         </span>
                       </div>
-                      <div className="py-2 md:py-3 px-1 md:px-2">
+                      <div className="py-2 md:py-3 px-0.5 md:px-2">
                         <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.ref}
                         </span>
                       </div>
-                      <div className="py-2 md:py-3 px-1 md:px-2">
+                      <div className="py-2 md:py-3 px-0.5 md:px-2">
                         <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.medida}
                         </span>
                       </div>
-                      <div className="py-2 md:py-3 px-1 md:px-2">
+                      <div className="py-2 md:py-3 px-0.5 md:px-2">
                         <span className="text-gray-600 font-open-sans text-xs md:text-lg">
                           {product.color}
                         </span>
                       </div>
-                      <div className="py-2 md:py-3 px-1 md:px-2">
+                      <div className="py-2 md:py-3 px-0.5 md:px-2">
                         <span className="text-gray-600 font-open-sans text-xs md:text-lg font-semibold">
                           {product.precio}
                         </span>
