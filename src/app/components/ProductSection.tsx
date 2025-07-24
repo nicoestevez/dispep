@@ -320,7 +320,12 @@ export default function ProductSection() {
                                     {allProducts[currentMobileProduct]?.description}
                                 </p>
                                 <button
-                                    onClick={() => handleOpenModal(allProducts[currentMobileProduct]?.name || '', allProducts[currentMobileProduct]?.image || '')}
+                                    onClick={() => handleOpenModal(
+                                        allProducts[currentMobileProduct]?.name || '',
+                                        allProducts[currentMobileProduct]?.image || '',
+                                        allProducts[currentMobileProduct]?.name || '',
+                                        allProducts[currentMobileProduct]?.description || ''
+                                    )}
                                     className="bg-dispep-primary text-white font-montserrat font-semibold px-3 py-1.5 rounded-lg hover:bg-dispep-primary/90 transition-colors text-xs"
                                 >
                                     Ver más
