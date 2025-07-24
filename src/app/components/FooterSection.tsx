@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 
 export default function FooterSection() {
     const [email, setEmail] = useState("");
@@ -30,19 +31,7 @@ export default function FooterSection() {
                         <div className="space-y-4">
                             {/* Phone */}
                             <div className="flex items-center gap-3">
-                                <svg
-                                    className="w-6 h-6 text-dispep-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M22 16.92v3c0 1.1-.9 2-2 2-10.39-.47-19.53-9.61-20-20 0-1.1.9-2 2-2h3c.55 0 1.04.22 1.41.59l2.83 2.83c.78.78.78 2.05 0 2.83l-1.41 1.41c1.72 3.18 4.43 5.89 7.61 7.61l1.41-1.41c.78-.78 2.05-.78 2.83 0l2.83 2.83c.37.37.59.86.59 1.41z"
-                                    />
-                                </svg>
+                                <FiPhone className="w-6 h-6 text-dispep-primary" />
                                 <span className="text-dispep-primary font-open-sans">
                                     +56 9 8127 9004
                                 </span>
@@ -50,44 +39,19 @@ export default function FooterSection() {
 
                             {/* Email */}
                             <div className="flex items-center gap-3">
-                                <svg
-                                    className="w-5 h-4 text-dispep-primary"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 20"
+                                <FiMail className="w-5 h-5 text-dispep-primary" />
+                                <a
+                                    href="mailto:contacto@dispep.cl"
+                                    className="text-dispep-primary font-open-sans hover:underline focus:outline-none"
+                                    aria-label="Enviar correo a contacto@dispep.cl"
                                 >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M22 4C22 2.9 21.1 2 20 2H4C2.9 2 2 2.9 2 4M22 4V16C22 17.1 21.1 18 20 18H4C2.9 18 2 17.1 2 16V4M22 4L12 11L2 4"
-                                    />
-                                </svg>
-                <a
-                    href="mailto:contacto@dispep.cl"
-                    className="text-dispep-primary font-open-sans hover:underline focus:outline-none"
-                    aria-label="Enviar correo a contacto@dispep.cl"
-                >
-                    contacto@dispep.cl
-                </a>
+                                    contacto@dispep.cl
+                                </a>
                             </div>
 
                             {/* Address */}
                             <div className="flex items-start gap-3">
-                                <svg
-                                    className="w-6 h-6 text-dispep-primary mt-0.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
-                                    />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
+                                <FiMapPin className="w-6 h-6 text-dispep-primary mt-0.5" />
                                 <span className="text-dispep-primary font-open-sans">
                                     <a
                                         href="https://maps.app.goo.gl/Mc6fGfL4ndbwk1sC9"
