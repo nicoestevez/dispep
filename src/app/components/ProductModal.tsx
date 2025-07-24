@@ -23,7 +23,7 @@ interface ProductModalProps {
   image?: string;
 }
 
-export default function ProductModal({ isOpen, onClose, categories }: ProductModalProps) {
+export default function ProductModal({ isOpen, onClose, categories, image }: ProductModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
