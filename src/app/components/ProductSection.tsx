@@ -129,14 +129,16 @@ export default function ProductSection() {
         return productDataMap[productName] || productDataMap["default"];
     };
 
-    const handleOpenModal = (productName: string) => {
+    const handleOpenModal = (productName: string, productImage: string) => {
         setSelectedProduct(productName);
+        setSelectedProductImage(productImage);
         setIsModalOpen(true);
     };
 
     const handleCloseModal = () => {
         setIsModalOpen(false);
         setSelectedProduct('');
+        setSelectedProductImage('');
     };
 
     const goToNextProducts = () => {
