@@ -82,6 +82,8 @@ export default function ProductSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState<string>('');
     const [selectedProductImage, setSelectedProductImage] = useState<string>('');
+    const [selectedProductTitle, setSelectedProductTitle] = useState<string>('');
+    const [selectedProductDescription, setSelectedProductDescription] = useState<string>('');
 
     const currentProducts = productSets[currentProductPage];
     const allProducts = productSets.flat(); // Flatten both sets for mobile navigation
