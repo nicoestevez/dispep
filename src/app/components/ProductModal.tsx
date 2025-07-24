@@ -20,6 +20,7 @@ interface ProductModalProps {
   isOpen: boolean;
   onClose: () => void;
   categories: ProductCategory[];
+  image?: string;
 }
 
 export default function ProductModal({ isOpen, onClose, categories }: ProductModalProps) {
