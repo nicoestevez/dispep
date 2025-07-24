@@ -241,7 +241,7 @@ export default function ProductSection() {
                                             {product.description}
                                         </p>
                                         <button
-                                            onClick={() => handleOpenModal(product.name, product.image)}
+                                            onClick={() => handleOpenModal(product.name, product.image, product.name, product.description)}
                                             className="bg-dispep-primary text-white font-montserrat font-semibold px-6 py-2 rounded-lg hover:bg-dispep-primary/90 transition-colors"
                                         >
                                             Ver más
