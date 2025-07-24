@@ -21,6 +21,8 @@ interface ProductModalProps {
   onClose: () => void;
   categories: ProductCategory[];
   image?: string;
+  title?: string;
+  description?: string;
 }
 
 export default function ProductModal({ isOpen, onClose, categories, image }: ProductModalProps) {
