@@ -10,7 +10,7 @@ export default function AboutSection() {
                         <h2 className="text-dispep-primary font-montserrat text-xl md:text-4xl font-bold mb-4 md:mb-6">
                             Quiénes Somos
                         </h2>
-                        <p className="text-dispep-primary font-open-sans text-sm md:text-xl leading-relaxed">
+                        <p className="text-dispep-text-gray font-open-sans text-sm md:text-xl leading-relaxed">
                             Dispep es una empresa dedicada a la venta de materiales de
                             construcción, con enfoque en la calidad, variedad y buenos
                             precios para todos sus clientes.

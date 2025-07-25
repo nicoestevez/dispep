@@ -31,18 +31,18 @@ export default function FooterSection() {
                         <div className="space-y-4">
                             {/* Phone */}
                             <div className="flex items-center gap-3">
-                                <FiPhone className="w-6 h-6 text-dispep-primary" />
-                                <span className="text-dispep-primary font-open-sans">
+                                <FiPhone className="w-6 h-6 text-dispep-text-gray" />
+                                <span className="text-dispep-text-gray font-open-sans">
                                     +56 9 8127 9004
                                 </span>
                             </div>
 
                             {/* Email */}
                             <div className="flex items-center gap-3">
-                                <FiMail className="w-5 h-5 text-dispep-primary" />
+                                <FiMail className="w-5 h-5 text-dispep-text-gray" />
                                 <a
                                     href="mailto:contacto@dispep.cl"
-                                    className="text-dispep-primary font-open-sans hover:underline focus:outline-none"
+                                    className="text-dispep-text-gray font-open-sans hover:underline focus:outline-none"
                                     aria-label="Enviar correo a contacto@dispep.cl"
                                 >
                                     contacto@dispep.cl
@@ -51,13 +51,13 @@ export default function FooterSection() {
 
                             {/* Address */}
                             <div className="flex items-start gap-3">
-                                <FiMapPin className="w-6 h-6 text-dispep-primary mt-0.5" />
-                                <span className="text-dispep-primary font-open-sans">
+                                <FiMapPin className="w-6 h-6 text-dispep-text-gray mt-0.5" />
+                                <span className="text-dispep-text-gray font-open-sans">
                                     <a
                                         href="https://maps.app.goo.gl/Mc6fGfL4ndbwk1sC9"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-dispep-primary font-open-sans hover:underline focus:outline-none"
+                                        className="text-dispep-text-gray font-open-sans hover:underline focus:outline-none"
                                         aria-label="Abrir dirección en Google Maps"
                                     >
                                         Camino Tapihue KM 0,7,<br />Casablanca
@@ -93,12 +93,12 @@ export default function FooterSection() {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Ingresa tu correo electrónico"
-                                    className="w-full h-12 px-4 pr-12 bg-dispep-primary/20 rounded-lg border-none outline-none text-dispep-primary placeholder-dispep-primary/50 font-open-sans"
+                                    className="w-full h-12 px-4 pr-12 bg-dispep-text-gray/20 rounded-lg border-none outline-none text-dispep-text-gray placeholder-dispep-text-gray/50 font-open-sans"
                                     required
                                 />
                                 <button
                                     type="submit"
-                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dispep-primary hover:text-dispep-primary/70 transition-colors"
+                                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dispep-text-gray hover:text-dispep-text-gray/70 transition-colors"
                                 >
                                     <svg
                                         className="w-6 h-6"
@@ -113,7 +113,7 @@ export default function FooterSection() {
                                     </svg>
                                 </button>
                             </div>
-                            <p className="text-dispep-primary/60 font-open-sans text-sm">
+                            <p className="text-dispep-text-gray/60 font-open-sans text-sm">
                                 No te pierdas nuestras novedades y ofertas exclusivas.
                             </p>
                         </form>

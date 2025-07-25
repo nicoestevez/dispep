@@ -131,9 +131,9 @@ export default function ProductSection() {
                     title: "Información del Producto",
                     description: "Detalles y especificaciones técnicas del producto seleccionado.",
                     products: [
-                        { codigo: "12345000", ref: "123456", medida: "Variadas", color: "Varios", precio: "Consultar" },
-                        { codigo: "12345001", ref: "123457", medida: "Variadas", color: "Varios", precio: "Consultar" },
-                        { codigo: "12345002", ref: "123458", medida: "Variadas", color: "Varios", precio: "Consultar" },
+                        { codigo: "12345000", ref: "123456", medida: "Variadas", color: "Varios", precio: "$7.790" },
+                        { codigo: "12345001", ref: "123457", medida: "Variadas", color: "Varios", precio: "$7.790" },
+                        { codigo: "12345002", ref: "123458", medida: "Variadas", color: "Varios", precio: "$7.790" },
                     ]
                 }
             ]
@@ -248,7 +248,7 @@ export default function ProductSection() {
                                         <h3 className="text-dispep-primary font-montserrat text-xl font-semibold mb-2">
                                             {product.name}
                                         </h3>
-                                        <p className="text-dispep-primary font-open-sans text-sm mb-4">
+                                        <p className="text-dispep-text-gray font-open-sans text-sm mb-4">
                                             {product.description}
                                         </p>
                                         <button
