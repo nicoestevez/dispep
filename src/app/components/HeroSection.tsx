@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { FiChevronRight, FiX, FiMenu } from 'react-icons/fi';
 
 export default function HeroSection() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -63,13 +64,9 @@ export default function HeroSection() {
                         <div className="md:hidden">
                             <button onClick={toggleMobileMenu} className="text-white p-2">
                                 {isMobileMenuOpen ? (
-                                    <svg className="w-6 h-6" fill="white" viewBox="0 0 24 24">
-                                        <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" />
-                                    </svg>
+                                    <FiX className="w-6 h-6 text-white" />
                                 ) : (
-                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                    </svg>
+                                    <FiMenu className="w-6 h-6 text-white" />
                                 )}
                             </button>
                         </div>
@@ -115,9 +112,7 @@ export default function HeroSection() {
                                         } border-dispep-primary`}
                                     >
                                         <span className="text-dispep-primary font-montserrat text-xl font-bold">{label}</span>
-                                        <svg className="w-8 h-8 text-dispep-primary" fill="none" stroke="currentColor" viewBox="0 0 31 30">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M11.75 22.5L19.25 15L11.75 7.5" />
-                                        </svg>
+                                        <FiChevronRight className="w-8 h-8 text-dispep-primary" />
                                     </button>
                                 ))}
                             </div>

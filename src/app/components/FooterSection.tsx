@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import { FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi';
 
 export default function FooterSection() {
     const [email, setEmail] = useState("");
@@ -100,17 +100,7 @@ export default function FooterSection() {
                                     type="submit"
                                     className="absolute right-3 top-1/2 transform -translate-y-1/2 text-dispep-text-gray hover:text-dispep-text-gray/70 transition-colors"
                                 >
-                                    <svg
-                                        className="w-6 h-6"
-                                        fill="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M15.3497 17.5L11.9543 15.2148L10.5851 16.3628L10.029 13.9189L15.9587 8.72567L8.84882 12.8097L5.5 10.3935L18.5 6.5L15.3497 17.5Z"
-                                        />
-                                    </svg>
+                                    <FiSend className="w-5 h-5 text-dispep-text-gray" />
                                 </button>
                             </div>
                             <p className="text-dispep-text-gray/60 font-open-sans text-sm">

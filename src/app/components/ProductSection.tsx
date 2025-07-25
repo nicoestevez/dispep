@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import ProductModal from './ProductModal';
 
 const productSets = [
@@ -214,19 +215,7 @@ export default function ProductSection() {
                             : "text-dispep-primary hover:text-dispep-primary/70 cursor-pointer"
                             }`}
                     >
-                        <svg
-                            className="w-12 h-12"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 48 48"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={4}
-                                d="M30 36L18 24L30 12"
-                            />
-                        </svg>
+                        <FiChevronLeft className="w-12 h-12" />
                     </button>
 
                     {/* Product Cards Container */}
@@ -272,19 +261,7 @@ export default function ProductSection() {
                             : "text-dispep-primary hover:text-dispep-primary/70 cursor-pointer"
                             }`}
                     >
-                        <svg
-                            className="w-12 h-12"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 48 48"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={4}
-                                d="M18 36L30 24L18 12"
-                            />
-                        </svg>
+                        <FiChevronRight className="w-12 h-12" />
                     </button>
                 </div>
 
