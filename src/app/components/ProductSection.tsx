@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import ProductModal from './ProductModal';
 
 const productSets = [
     // First set of products
@@ -78,9 +79,84 @@ export default function ProductSection() {
     const isMobileMenuOpen = false;
     const [currentProductPage, setCurrentProductPage] = useState(0);
     const [currentMobileProduct, setCurrentMobileProduct] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState<string>('');
+    const [selectedProductImage, setSelectedProductImage] = useState<string>('');
+    const [selectedProductTitle, setSelectedProductTitle] = useState<string>('');
+    const [selectedProductDescription, setSelectedProductDescription] = useState<string>('');
 
     const currentProducts = productSets[currentProductPage];
     const allProducts = productSets.flat(); // Flatten both sets for mobile navigation
+
+    // Sample product data for modal - in a real app this would come from an API
+    type ProductModalCategory = {
+        title: string;
+        description: string;
+        products: {
+            codigo: string;
+            ref: string;
+            medida: string;
+            color: string;
+            precio: string;
+        }[];
+    };
+    const getProductModalData = (productName: string): ProductModalCategory[] => {
+        const productDataMap: Record<string, ProductModalCategory[]> = {
+            "Planchas OSB": [
+                {
+                    title: "Planchas OSB",
+                    description: "Planchas de gran calidad de tamaños distintos y de variados grosores.",
+                    products: [
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                    ]
+                },
+                {
+                    title: "Metalcom",
+                    description: "Metalcom perfecto para construcción.",
+                    products: [
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                        { codigo: "18630000", ref: "187010", medida: "20x40mm", color: "Café", precio: "$7.790" },
+                    ]
+                }
+            ],
+            // Default data for other products
+            "default": [
+                {
+                    title: "Información del Producto",
+                    description: "Detalles y especificaciones técnicas del producto seleccionado.",
+                    products: [
+                        { codigo: "12345000", ref: "123456", medida: "Variadas", color: "Varios", precio: "$7.790" },
+                        { codigo: "12345001", ref: "123457", medida: "Variadas", color: "Varios", precio: "$7.790" },
+                        { codigo: "12345002", ref: "123458", medida: "Variadas", color: "Varios", precio: "$7.790" },
+                    ]
+                }
+            ]
+        };
+
+        return productDataMap[productName] || productDataMap["default"];
+    };
+
+    const handleOpenModal = (productName: string, productImage: string, productTitle: string, productDescription: string) => {
+        setSelectedProduct(productName);
+        setSelectedProductImage(productImage);
+        setSelectedProductTitle(productTitle);
+        setSelectedProductDescription(productDescription);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setSelectedProduct('');
+        setSelectedProductImage('');
+        setSelectedProductTitle('');
+        setSelectedProductDescription('');
+    };
 
     const goToNextProducts = () => {
         if (currentProductPage < productSets.length - 1) {
@@ -172,10 +248,13 @@ export default function ProductSection() {
                                         <h3 className="text-dispep-primary font-montserrat text-xl font-semibold mb-2">
                                             {product.name}
                                         </h3>
-                                        <p className="text-dispep-primary font-open-sans text-sm mb-4">
+                                        <p className="text-dispep-text-gray font-open-sans text-sm mb-4">
                                             {product.description}
                                         </p>
-                                        <button className="bg-dispep-primary text-white font-montserrat font-semibold px-6 py-2 rounded-lg hover:bg-dispep-primary/90 transition-colors">
+                                        <button
+                                            onClick={() => handleOpenModal(product.name, product.image, product.name, product.description)}
+                                            className="bg-dispep-primary text-white font-montserrat font-semibold px-6 py-2 rounded-lg hover:bg-dispep-primary/90 transition-colors"
+                                        >
                                             Ver más
                                         </button>
                                     </div>
@@ -251,7 +330,15 @@ export default function ProductSection() {
                                 <p className="text-dispep-primary font-open-sans text-xs mb-3 leading-relaxed">
                                     {allProducts[currentMobileProduct]?.description}
                                 </p>
-                                <button className="bg-dispep-primary text-white font-montserrat font-semibold px-3 py-1.5 rounded-lg hover:bg-dispep-primary/90 transition-colors text-xs">
+                                <button
+                                    onClick={() => handleOpenModal(
+                                        allProducts[currentMobileProduct]?.name || '',
+                                        allProducts[currentMobileProduct]?.image || '',
+                                        allProducts[currentMobileProduct]?.name || '',
+                                        allProducts[currentMobileProduct]?.description || ''
+                                    )}
+                                    className="bg-dispep-primary text-white font-montserrat font-semibold px-3 py-1.5 rounded-lg hover:bg-dispep-primary/90 transition-colors text-xs"
+                                >
                                     Ver más
                                 </button>
                             </div>
@@ -283,6 +370,16 @@ export default function ProductSection() {
                     </button>
                 </div>
             </div>
+
+            {/* Product Modal */}
+            <ProductModal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+                categories={getProductModalData(selectedProduct)}
+                image={selectedProductImage}
+                title={selectedProductTitle}
+                description={selectedProductDescription}
+            />
         </section>
     );
 }

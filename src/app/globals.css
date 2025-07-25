@@ -11,6 +11,7 @@
   --color-dispep-primary: #556b2f;
   --color-dispep-gray: #f6f6f5;
   --color-dispep-white: #ffffff;
+  --color-dispep-text-gray: #767676;
 
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
