@@ -327,7 +327,7 @@ export default function ProductSection() {
                                 <h3 className="text-dispep-primary font-montserrat text-base font-semibold mb-1">
                                     {allProducts[currentMobileProduct]?.name}
                                 </h3>
-                                <p className="text-dispep-primary font-open-sans text-xs mb-3 leading-relaxed">
+                                <p className="text-dispep-text-gray font-open-sans text-xs mb-3 leading-relaxed">
                                     {allProducts[currentMobileProduct]?.description}
                                 </p>
                                 <button
